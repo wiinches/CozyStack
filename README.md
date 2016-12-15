@@ -4,8 +4,7 @@
 # Pre-Installation
 Download RPM files needed to install needed services and dependencies.
 
-Download Images:  
-https://drive.google.com/open?id=0B2bFFRuLgR2JODNmLVhrdjQ0aDQ
+Download Images: https://drive.google.com/open?id=0B2bFFRuLgR2JODNmLVhrdjQ0aDQ
 
 Download Docker RPMs:
 https://drive.google.com/drive/folders/0B2bFFRuLgR2JMWw2YWdzXzhueDg?usp=sharing
