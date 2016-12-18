@@ -4,16 +4,16 @@ INTERFACE=<name of collection interface (like eth0)>
 ES_IP=<full ip of your elasticsearch server>
 DOMAIN=<domain name>
 REVERSE_ZONE=<reverse domain zone (like 1.168.192.in-addr.arpa.)> ### Network portion of the subnet backwards with '.in-addr.arpa.' on the end.
-
+IPA_Pass=<mustbeatleast6charictersinlength>
 ################################################################################
 # EDIT BELOW AT YOUR OWN RISK                                                  #
 ################################################################################
 
 # Install IPA
 yum -y localinstall rpm/freeipa/*.rpm
-ipa-server-install -U -r $DOMAIN -n $DOMAIN -p toortoor -a toortoor --mkhomedir --setup-dns --no-forwarders --reverse-zone=$REVERSE_ZONE
-systemctl enavle ipa
-systemctl start ipa
+ipa-server-install -U -r $DOMAIN -n $DOMAIN -p $IPA_PASS -a $IPA_PASS --mkhomedir --setup-dns --no-forwarders --reverse-zone=$REVERSE_ZONE
+ipactl start
+ipactl status
 
 # Install Bro
 yum -y localinstall rpm/base/*.rpm
