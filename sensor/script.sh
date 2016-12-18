@@ -4,7 +4,7 @@ INTERFACE=<name of collection interface (like eth0)>
 ES_IP=<full ip of your elasticsearch server>
 DOMAIN=<domain name>
 REVERSE_ZONE=<reverse domain zone (like 1.168.192.in-addr.arpa.)> ### Network portion of the subnet backwards with '.in-addr.arpa.' on the end.
-IPA_Pass=<mustbeatleast6charictersinlength>
+IPA_Pass=<mustbeatleast6charactersinlength>
 ################################################################################
 # EDIT BELOW AT YOUR OWN RISK                                                  #
 ################################################################################
