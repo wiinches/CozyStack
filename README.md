@@ -4,25 +4,13 @@
 # Pre-Installation
 Download RPM files needed to install needed services and dependencies.
 
-Download Sensor files: https://drive.google.com/drive/folders/0B2Oi1KHMHUVJTnRrejhTWHM2UWs
-
-Download Images: https://drive.google.com/open?id=0B2bFFRuLgR2JODNmLVhrdjQ0aDQ
-
-Download Docker RPMs: https://drive.google.com/drive/folders/0B2bFFRuLgR2JMWw2YWdzXzhueDg?usp=sharing
-
-Download Extra RPMS: https://drive.google.com/drive/folders/0B2bFFRuLgR2JWGc0dkRRaUlRRk0?usp=sharing
+Download Sensor and Application Server files: https://drive.google.com/open?id=0B2Oi1KHMHUVJTnRrejhTWHM2UWs
 
 ### Sensor files
-After downloading all 4 files from Google Drive, place rpm.tar.gz, bro.tar.gz, and suricata.tar.gz into the sensor/ folder. Place GeoLite2-City.mmdb into sensor/logstash folder.
+After downloading sensor.tar.gz, place that file into the sensor/ folder.
 
-### Images
-After downloading images from Google Drive move .docker files to "images" folder.
-
-### Docker RPMs
-After downloading docker RPMs from Google Drive move .rpm files to "docker" folder
-
-### Extras
-After downloading extra RPMs from Google Drive move .rpm files to "extras" folder.
+### Application files
+After downloading apps.tar.gz, place that file into the application/ folder.
 
 # Sensor Server Install Guide
 
