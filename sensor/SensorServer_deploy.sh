@@ -27,7 +27,7 @@ ipa-server-install -U \
   --setup-dns \
   --no-forwarders \
   --reverse-zone=$(echo $ES_IP | awk -F. '{print $3"."$2"."$1".in-addr.arpa"}')
-systemctl enavle ipa
+systemctl enable ipa
 systemctl start ipa
 
 # Install Bro
