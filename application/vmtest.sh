@@ -6,7 +6,7 @@
 HOME_DIR=/data/
 
 # Domain to be used for Cozy Stack installation.
-DOMAIN=90.fak
+DOMAIN=<Domain>
 
 ################################################################################
 # END OF USER CONFIGURATION - EDIT BELOW AT YOUR OWN RISK
