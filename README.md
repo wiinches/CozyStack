@@ -1,4 +1,14 @@
 # CozyStack Installation Guide.
+
+```
+   ____               ____  _             _    
+  / ___|___ _____   _/ ___|| |_ __ _  ___| | __
+ | |   / _ \_  / | | \___ \| __/ _` |/ __| |/ /
+ | |__| (_) / /| |_| |___) | || (_| | (__|   < 
+  \____\___/___|\__, |____/ \__\__,_|\___|_|\_\
+                |___/                          
+```
+
 ###### Disclaimer: CozyStack has been designed specifically for certain hardware sets. Meaning it was not meant to be a dynamic install, before you begin this installation please notice that within the provided scripts some  values will need to be assigned in order for this to work.
 
 # Pre-Installation
@@ -56,3 +66,12 @@ Verify docker images are running.
 ```
 docker ps -a
 ```
+
+## To-do
+* Have script output IMPORTANT.TXT
+* Prompt user for everything upfront `read -p`
+* CozyStack ASCII banner in script
+* Health script
+* Logstash 5.1 with MQ (set heap size)
+* Incorporate Stenoremote container
+* Logstash processed folder (file tracking)
