@@ -74,4 +74,4 @@ docker ps -a
 - [x] Logstash 5.1 with MQ (set heap size)
 - [ ] Incorporate Stenoremote container
 - [ ] Logstash processed folder (file tracking)
-- [ ] Create Elasticsearch and Kibana 5.1 with X-Pack Docker containers.
+- [ ] Create containers Elasticsearch and Kibana 5.1 with X-Pack installed.
