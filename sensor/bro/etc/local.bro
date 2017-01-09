@@ -118,8 +118,8 @@ export
                 ["application/x-dmg"] = "dmg",
                 ["application/x-dosexec"] = "exe",
                 ["application/x-msdownload"] = "exe",
-                ["application/x-msdos-program"] = "exe",
-                ["application/octet-stream"] = "exe",
+		            ["application/x-msdos-program"] = "exe",
+		            ["application/octet-stream"] = "exe",
                 ["application/java-archive"] = "jar",
                 ["application/x-java-applet"] = "jar",
                 ["text/x-perl"] = "pl",
@@ -161,4 +161,17 @@ event file_sniff(f: fa_file, meta: fa_metadata)
 
         local cmd = fmt("bash /data/md5party/md5party.sh /data/md5party/extract/%s-%s-%s", f$source, f$id, ext);
         system(cmd);
+}
+
+event bro_init() &priority=-10
+{
+        Log::disable_stream(CaptureLoss::LOG);
+        Log::disable_stream(Cluster::LOG);
+        Log::disable_stream(Communication::LOG);
+        Log::disable_stream(LoadedScripts::LOG);
+        Log::disable_stream(PacketFilter::LOG);
+        Log::disable_stream(Stats::LOG);
+        Log::disable_stream(Unified2::LOG);
+        Log::disable_stream(DPD::LOG);
+        Log::disable_stream(Software::LOG);
 }

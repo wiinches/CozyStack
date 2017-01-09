@@ -914,8 +914,8 @@ coredump:
 # This feature is currently only used by the reject* keywords.
 host-mode: auto
 
-# Number of packets preallocated per thread. The default is 1024. A higher number 
-# will make sure each CPU will be more easily kept busy, but may negatively 
+# Number of packets preallocated per thread. The default is 1024. A higher number
+# will make sure each CPU will be more easily kept busy, but may negatively
 # impact caching.
 #
 # If you are using the CUDA pattern matcher (mpm-algo: ac-cuda), different rules
@@ -952,12 +952,12 @@ host-mode: auto
 # activated in live capture mode. You can use the filename variable to set
 # the file name of the socket.
 unix-command:
-  enabled: auto
+  enabled: no
   #filename: custom.socket
 
 # Magic file. The extension .mgc is added to the value here.
 #magic-file: /usr/share/file/magic
-#magic-file: 
+#magic-file:
 
 legacy:
   uricontent: enabled

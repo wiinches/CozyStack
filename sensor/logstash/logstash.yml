@@ -16,7 +16,7 @@
 #
 # Use a descriptive name for the node:
 #
-# node.name: test
+node.name: CozyStack
 #
 # If omitted the node name will default to the machine's host name
 #
@@ -65,7 +65,7 @@ path.config: /etc/logstash/conf.d
 #
 # Pipeline configuration string for the main pipeline
 #
-# config.string:
+#config.string: /etc/logstash/conf.d/logstash.conf
 #
 # At startup, test if the configuration is valid and exit (dry run)
 #
@@ -83,14 +83,14 @@ path.config: /etc/logstash/conf.d
 # Show fully compiled configuration as debug log message
 # NOTE: --log.level must be 'debug'
 #
-# config.debug: false
+config.debug: true
 #
 # ------------ Queuing Settings --------------
 #
 # Internal queuing model, "memory" for legacy in-memory based queuing and
 # "persisted" for disk-based acked queueing. Defaults is memory
 #
-queue.type: persistent
+queue.type: persisted
 #
 # If using queue.type: persisted, the directory path where the data files will be stored.
 # Default is path.data/queue
@@ -135,12 +135,12 @@ queue.max_bytes: 100gb
 #
 # Bind address for the metrics REST endpoint
 #
-# http.host: "127.0.0.1"
+http.host: "0.0.0.0"
 #
 # Bind port for the metrics REST endpoint, this option also accept a range
 # (9600-9700) and logstash will pick up the first available ports.
 #
-# http.port: 9600-9700
+http.port: 9600
 #
 # ------------ Debugging Settings --------------
 #

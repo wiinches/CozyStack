@@ -19,9 +19,16 @@ filebeat.prospectors:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
+    - /var/log/suricata/eve.json
+  tags: ["suricata"]
     #- /var/log/*.log
     #- c:\programdata\elasticsearch\logs\*
 
+- input_type: log
+  paths:
+    - /data/bro/current/*.log
+  exclude_files: ["communication.log", "loaded_scripts.log", "stdout.log", "stderr.log"]
+  tags: ["bro"]
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
   #exclude_lines: ["^DBG"]
@@ -78,9 +85,9 @@ filebeat.prospectors:
 # Multiple outputs may be used.
 
 #-------------------------- Elasticsearch output ------------------------------
-output.elasticsearch:
+#output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["ES_HOST:9200"]
+  #hosts: ["ES_HOST:9200"]
 
   # Optional protocol and basic auth credentials.
   #protocol: "https"
@@ -88,9 +95,9 @@ output.elasticsearch:
   #password: "changeme"
 
 #----------------------------- Logstash output --------------------------------
-#output.logstash:
+output.logstash:
   # The Logstash hosts
-  #hosts: ["localhost:5044"]
+  hosts: ["localhost:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
