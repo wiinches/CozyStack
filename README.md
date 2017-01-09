@@ -4,7 +4,7 @@
    ____               ____  _             _    
   / ___|___ _____   _/ ___|| |_ __ _  ___| | __
  | |   / _ \_  / | | \___ \| __/ _` |/ __| |/ /
- | |__| (_) / /| |_| |___) | || (_| | (__|   < 
+ | |__| (_) / /| |_| |___) | || (_| | (__|   <
   \____\___/___|\__, |____/ \__\__,_|\___|_|\_\
                 |___/                          
 ```
@@ -68,10 +68,10 @@ docker ps -a
 ```
 
 ## To-do
-* Have script output IMPORTANT.TXT
-* Prompt user for everything upfront `read -p`
-* CozyStack ASCII banner in script
-* Health script
-* Logstash 5.1 with MQ (set heap size)
-* Incorporate Stenoremote container
-* Logstash processed folder (file tracking)
+- [ ] Prompt user for everything upfront `read -p`
+- [ ] CozyStack ASCII banner in script
+- [ ] Health script
+- [x] Logstash 5.1 with MQ (set heap size)
+- [ ] Incorporate Stenoremote container
+- [ ] Logstash processed folder (file tracking)
+- [ ] Create Elasticsearch and Kibana 5.1 with X-Pack Docker containers.
