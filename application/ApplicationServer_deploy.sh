@@ -30,30 +30,30 @@ MATTER_IP=$IP.12
 ################################################################################
 # END OF USER CONFIGURATION - EDIT BELOW AT YOUR OWN RISK                      #
 ################################################################################
-#tar xzvf apps.tar.gz
+tar xzvf apps.tar.gz
 
 # Install docker (and other RPMs)
-#yum -y localinstall ./extras/*
-#yum -y localinstall ./docker/*
+yum -y localinstall ./extras/*
+yum -y localinstall ./docker/*
 
 # Start docker service
-#systemctl enable docker
-#systemctl start docker
-#docker load -i ./images/rancher-agentv1.1.0.docker
-#docker load -i ./images/elasticsearch.docker
-#docker load -i ./images/kibana.docker
-#docker load -i ./images/rancher.docker
-#docker load -i ./images/Gogs.docker
-#docker load -i ./images/openfire.docker
-#docker load -i ./images/owncloud.docker
-#docker load -i ./images/logstash.docker
-##docker load -i ./images/mattermost.docker
+systemctl enable docker
+systemctl start docker
+docker load -i ./images/rancher-agentv1.1.0.docker
+docker load -i ./images/elasticsearch.docker
+docker load -i ./images/kibana.docker
+docker load -i ./images/rancher.docker
+docker load -i ./images/Gogs.docker
+docker load -i ./images/openfire.docker
+docker load -i ./images/owncloud.docker
+docker load -i ./images/logstash.docker
+#docker load -i ./images/mattermost.docker
 #docker load -i ./images/osticket.docker
 #docker load -i ./images/mysql.docker
 
-#echo "net.ipv4.conf.all.forwarding=1" >> /usr/lib/sysctl.d/00-system.conf
-#echo "vm.max_map_count=1073741824" >> /usr/lib/sysctl.d/00-system.conf
-#echo -e "\nnameserver $IP.3\n" >> /etc/resolv.conf
+echo "net.ipv4.conf.all.forwarding=1" >> /usr/lib/sysctl.d/00-system.conf
+echo "vm.max_map_count=1073741824" >> /usr/lib/sysctl.d/00-system.conf
+echo -e "\nnameserver $IP.3\n" >> /etc/resolv.conf
 
 ################## INSTALL Elasticsearch ##################
 bash interface.sh $INTERFACE $ES_IP 0
@@ -145,4 +145,4 @@ docker run --restart=always -itd --name owncloud -h owncloud.$DOMAIN \
 #            install file:///tmp/es/x-pack-5.1.1.zip
 
 # Reboot after install finishes
-# init 6
+init 6
