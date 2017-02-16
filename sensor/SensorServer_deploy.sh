@@ -19,14 +19,14 @@ BRO_WORKERS=2      # For VMs
 
 #IP Schema
 IPA_IP=$IP.3
-ES_IP=$IP.5
-KIBANA_IP=$IP.6
-RANCHER_IP=$IP.7
-RANCHER_AGENT_IP=$IP.8
-OWNCLOUD_IP=$IP.9
-GOGS_IP=$IP.10
-CHAT_IP=$IP.11
-MATTER_IP=$IP.12
+ES_IP=$IP.7
+KIBANA_IP=$IP.8
+RANCHER_IP=$IP.9
+RANCHER_AGENT_IP=$IP.10
+OWNCLOUD_IP=$IP.11
+GOGS_IP=$IP.12
+CHAT_IP=$IP.13
+MATTER_IP=$IP.14
 ################################################################################
 # EDIT BELOW AT YOUR OWN RISK                                                  #
 ################################################################################
