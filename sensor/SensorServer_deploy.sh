@@ -34,6 +34,7 @@ tar xzvf sensor.tar.gz
 
 echo -e $ES_IP\\telasticsearch >> /etc/hosts
 # Install IPA
+yum -y localinstall rpm/logstash/*.rpm # packages needed for freeIPA aswell as logstash
 yum -y localinstall rpm/freeipa/*.rpm
 ipa-server-install -U \
   -r $DOMAIN \
@@ -148,7 +149,7 @@ systemctl enable metricbeat
 systemctl start metricbeat
 
 # Install Logstash
-yum -y localinstall rpm/logstash/*.rpm
+# yum -y localinstall rpm/logstash/*.rpm
 mkdir -p /usr/share/GeoIP
 cp logstash/GeoLite2-City.mmdb /usr/share/GeoIP
 cp logstash/logstash.service /etc/systemd/system
